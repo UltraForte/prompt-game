@@ -41,21 +41,61 @@
             alert("That's great!");
         };
         } else if (answer === "Bad") {
-            console.log("recieved answer")
-            howAreYou();
-            console.log("executed function");
-
-            function howAreYou() {
+            console.log("recieved answer");
             alert("Oh come'on! You don't really mean that!");
+            console.log("executed function");
+            let answerIfSick = prompt("Are you sick?");
+
+            if (answerIfSick === "Yes") {
+            alert("I guess you ARE having a bad day. Sorry to hear that."); 
+            } else if (answerIfSick === "No") {
+            let answerIfHomeless = prompt("No? Ok then. Are you homeless?");
+            } else {
+            alert("Answer \"Yes\" or \"No\"");
+            let answerIfHomeless = prompt("No? Ok then. Are you homeless?");
+                if (answerIfHomeless === "Yes") {
+                alert("Oh, ok. Uhh... sorry to hear that.");
+                } else if (answerIfHomeless === "No") {
+                let answerIfStarving = prompt("No? So you must be hungry?");
+                
+                    if (answerIfStarving === "Yes") {
+                    alert("Look on the bright side - you are giving your body a rest and time to heal. As long as you don\'t die, your starvation is for the best!");
+                    } else if (answerIfStarving === "No") {
+                    let answerIfHave = prompt("So you have everything you need today?");
+                        if (answerIfHave === "Yes") {
+                        alert("Sounds like your day is not so bad;\)");
+                        } else if (answerIfHave === "No") {
+                        let answerIfOk = prompt("Yes, you do. Everything is fine today, and will be even better tomorrow. Brighten up:\), ok?");
+                            if (answerIfOk === "Ok") {
+                            alert("Good:)");
+                            } else if (answerIfOk === "No") {
+                            let answerStopIt = prompt("What do you mean \"No\"? Stop it. You\'re okay, just don\'t overthink things.");
+                                if (answerStopIt === "Ok") {
+                                alert("Ok. good.");
+                                } else if (answerStopIt === "No") {
+                                alert("Ok. Fine. Stay grumpy. I\'m leaving. If you change your mind, refresh the page.");
+                                };
+                            };
+                        
+                    };
+                };
+            
+
+            };
+            
+            
+
+            
+            
         };
         } else if (answer === null) {
             console.log("recieved answer");
-            howAreYou();
+            avoidAnswer();
             console.log("executed function");
             nullAnswer();
 
 
-            function howAreYou() {
+            function avoidAnswer() {
             alert("You can't just do that to avoid answering");
             } 
         } else {
