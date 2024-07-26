@@ -33,61 +33,106 @@
         let answer = prompt("How is your day?");
         
         if (answer === "Good") {
-            console.log("recieved answer")
+            console.log("recieved answer");
             howAreYou();
             console.log("executed function");
 
             function howAreYou() {
             alert("That's great!");
         };
+
+//Bad Answer Code starts here. I put chunks of code in functions to// 
+//make it loop back from wrong inputs to the correct prompt//
         } else if (answer === "Bad") {
             console.log("recieved answer");
             alert("Oh come'on! You don't really mean that!");
             console.log("executed function");
+            ifSick();
+        
+            
+    function ifSick() {
             let answerIfSick = prompt("Are you sick?");
 
             if (answerIfSick === "Yes") {
             alert("I guess you ARE having a bad day. Sorry to hear that."); 
             } else if (answerIfSick === "No") {
-            let answerIfHomeless = prompt("No? Ok then. Are you homeless?");
+            ifHomeless();
             } else {
             alert("Answer \"Yes\" or \"No\"");
-            let answerIfHomeless = prompt("No? Ok then. Are you homeless?");
+            ifSick();
+            };
+        };
+
+    function ifHomeless() {
+                let answerIfHomeless = prompt("No? Ok then. Are you homeless?");
+
                 if (answerIfHomeless === "Yes") {
-                alert("Oh, ok. Uhh... sorry to hear that.");
+                alert("Oh, uhh...Ok. Maybe you ARE having a bad day.");
                 } else if (answerIfHomeless === "No") {
+                ifHungry();
+                } else  {
+                alert("Answer \"Yes\" or \"No\"");
+                ifHomeless();
+                };
+            };
+
+    function ifHungry() {
                 let answerIfStarving = prompt("No? So you must be hungry?");
                 
-                    if (answerIfStarving === "Yes") {
-                    alert("Look on the bright side - you are giving your body a rest and time to heal. As long as you don\'t die, your starvation is for the best!");
-                    } else if (answerIfStarving === "No") {
-                    let answerIfHave = prompt("So you have everything you need today?");
-                        if (answerIfHave === "Yes") {
-                        alert("Sounds like your day is not so bad;\)");
-                        } else if (answerIfHave === "No") {
-                        let answerIfOk = prompt("Yes, you do. Everything is fine today, and will be even better tomorrow. Brighten up:\), ok?");
-                            if (answerIfOk === "Ok") {
-                            alert("Good:)");
-                            } else if (answerIfOk === "No") {
-                            let answerStopIt = prompt("What do you mean \"No\"? Stop it. You\'re okay, just don\'t overthink things.");
-                                if (answerStopIt === "Ok") {
-                                alert("Ok. good.");
-                                } else if (answerStopIt === "No") {
-                                alert("Ok. Fine. Stay grumpy. I\'m leaving. If you change your mind, refresh the page.");
-                                };
-                            };
-                        
-                    };
+                if (answerIfStarving === "Yes") {
+                alert("Look on the bright side - you are giving your body a rest and time to heal. As long as you don\'t die, your starvation is for the best!");
+                } else if (answerIfStarving === "No") {
+                ifStarving();
+                } else {
+                alert("Answer \"Yes\" or \"No\"");
+                ifHungry();
                 };
-            
-
             };
-            
-            
+       
+    function ifStarving() {
+                let answerIfHave = prompt("So you have everything you need today?");
 
+                if (answerIfHave === "Yes") {
+                alert("Sounds like your day is not so bad;\)");
+                } else if (answerIfHave === "No") {
+                everythingIsFine();
+                } else {
+                alert("Answer \"Yes\" or \"No\"");
+                ifStarving();
+                };
+            };
+
+    function everythingIsFine() {
+                let answerIfOk = prompt("Yes, you do. Everything is fine today, and will be even better tomorrow. Brighten up:\), ok?");
+
+                if (answerIfOk === "Ok") {
+                alert("Good:)");
+                } else if (answerIfOk === "No") {
+                stopIt();
+                } else {
+                alert("Answer \"Yes\" or \"No\"");
+                everythingIsFine();
+                };
+            };
+
+    function stopIt() {
+                let answerStopIt = prompt("What do you mean \"No\"? Stop it. You\'re fine, just don\'t overthink things.");
+
+                if (answerStopIt === "Ok") {
+                alert("Ok. good.");
+                } else if (answerStopIt === "No") {
+                alert("Ok. Fine. Stay grumpy. I\'m leaving. If you change your mind, refresh the page.");
+                } else {
+                alert("Answer \"Ok\" or \"No\"");
+                stopIt() 
+                }
+            };
+//Bad Answer Code is above//
+                
+                
             
             
-        };
+        
         } else if (answer === null) {
             console.log("recieved answer");
             avoidAnswer();
@@ -245,6 +290,15 @@ let answer = prompt("How is your day?");
         };
     };
 
+
+
+
+                
+                
+                    
+            
+
+    
 
     </script>
 </body>
