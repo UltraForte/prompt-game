@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Java Practice</title>
+</head>
+<body>
+    <script>
+        let a
+        function add7(a) {
+            return(a + 7);
+        }
+
+        let b
+        let c
+        function multiply(b,c) {
+            return(b * c);
+        }
+
+        let string = "if the first letter in not capitalized, it\'s not working."
+        function capitalize(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+
+        function lastLetter(string) {
+            return string.slice(-1);
+        }
+
+
+
+        //Prompt Game Starts Here//
+
+        let answer = prompt("How is your day?");
+        
+        if (answer === "Good") {
+            console.log("recieved answer")
+            howAreYou();
+            console.log("executed function");
+
+            function howAreYou() {
+            alert("That's great!");
+        };
+        } else if (answer === "Bad") {
+            console.log("recieved answer")
+            howAreYou();
+            console.log("executed function");
+
+            function howAreYou() {
+            alert("Oh come'on! You don't really mean that!");
+        };
+        } else if (answer === null) {
+            console.log("recieved answer");
+            howAreYou();
+            console.log("executed function");
+            nullAnswer();
+
+
+            function howAreYou() {
+            alert("You can't just do that to avoid answering");
+            } 
+        } else {
+            console.log("recieved answer");
+            answerYesNo();
+            console.log("executed function");
+            elseAnswer ();
+            console.log("elseAnswer executed");
+
+
+        // On this line - add code to execute the prompt again,
+        // TIP: You need to put these functions into bigger functions,
+        // and make them loop, and also make these functions accessible
+        // at Global Scope, so that you can actually call on them in 
+        // other functions. Refer to "Function Expressions" bookmark.
+        // Remember - write or declare the functions at 
+        // Global Scope to make them accessible.
+
+            function answerYesNo() {
+            alert("You need to answer \"Good\" or \"Bad\".");
+            };
+        };
+
+//First Else Answer//
+    function elseAnswer() {
+        let answer = prompt("How is your day?");
+
+        if (answer === "Good") {
+            console.log("recieved answer")
+            howAreYou();
+            console.log("executed function");
+
+            function howAreYou() {
+            alert("That's great!");
+        };
+        } else if (answer === "Bad") {
+            console.log("recieved answer")
+            howAreYou();
+            console.log("executed function");
+
+            function howAreYou() {
+            alert("Oh come'on! You don't really mean that!");
+        };
+        } else if (answer === null) {
+            console.log("recieved answer");
+            howAreYou();
+            console.log("executed function");
+            prompt("How is your day?");
+
+            function howAreYou() {
+            alert("You can't just do that to avoid answering");
+            } 
+        } else {
+            console.log("recieved answer");
+            stopGibberish();
+            console.log("told to stop gibberish");
+            elseAnswerTwo();
+
+            function howAreYou() {
+            alert("You need to answer \"Good\" or \"Bad\"");
+            };
+            function stopGibberish() {
+            alert("Stop that gibberish! Answer \"Good\" or \"Bad\"!");
+            };
+        }
+    }
+//Else Answer Two//
+    function elseAnswerTwo() {
+        let answer = prompt("How is your day?");
+
+        if (answer === "Good") {
+            console.log("recieved answer")
+            howAreYou();
+            console.log("executed function");
+
+            function howAreYou() {
+            alert("That's great!");
+        };
+        } else if (answer === "Bad") {
+            console.log("recieved answer")
+            howAreYou();
+            console.log("executed function");
+
+            function howAreYou() {
+            alert("Oh come'on! You don't really mean that!");
+        };
+        } else if (answer === null) {
+            console.log("recieved answer");
+            howAreYou();
+            console.log("executed function");
+            prompt("How is your day?");
+
+            function howAreYou() {
+            alert("You can't just do that to avoid answering");
+            } 
+        } else {
+            console.log("recieved answer");
+            okFine();
+            console.log("okFine executed");
+        }
+    }
+function okFine() {
+alert("Ok. Fine. Don't Answer. But if you decide to start making sense, then refresh the page.");
+}
+
+//Null Answer Code//
+function nullAnswer() {
+let answer = prompt("How is your day?");
+        
+        if (answer === "Good") {
+            console.log("recieved answer")
+            howAreYou();
+            console.log("executed function");
+
+            function howAreYou() {
+            alert("That's great!");
+        };
+        } else if (answer === "Bad") {
+            console.log("recieved answer")
+            howAreYou();
+            console.log("executed function");
+
+            function howAreYou() {
+            alert("Oh come'on! You don't really mean that!");
+        };
+        } else if (answer === null) {
+            console.log("recieved answer");
+            howAreYou();
+            console.log("executed function");
+            nullAnswer();
+
+
+            function howAreYou() {
+            alert("You can't just do that to avoid answering");
+            } 
+        } else {
+            console.log("recieved answer");
+            answerYesNo();
+            console.log("executed function");
+            elseAnswer ();
+            console.log("elseAnswer executed");
+
+
+            function answerYesNo() {
+            alert("You need to answer \"Good\" or \"Bad\".");
+            };
+        };
+    };
+
+
+    </script>
+</body>
+</html>
